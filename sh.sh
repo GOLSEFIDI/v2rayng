@@ -64,7 +64,7 @@ detect_and_update_package_manager() {
         elif [[ "$OS" == "CentOS"* ]]; then
         PKG_MANAGER="yum"
         $PKG_MANAGER update -y
-        $PKG_MANAGER epel-release -y
+        $PKG_MANAGER install epel-release -y
         elif [ "$OS" == "Fedora"* ]; then
         PKG_MANAGER="dnf"
         $PKG_MANAGER update
